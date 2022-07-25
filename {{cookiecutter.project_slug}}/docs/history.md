@@ -2,4 +2,6 @@
 layout: default
 ---
 
-.. include:: ../HISTORY.md
+{{ cookiecutter.version }} ({% now 'local' %})
+
+* First release on PyPI.

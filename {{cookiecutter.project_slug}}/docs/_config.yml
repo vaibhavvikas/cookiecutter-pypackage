@@ -11,11 +11,13 @@ navigation:
     link: ./
   - name: Installation
     link: ./installation.html
-  - name: Installation
-    link: ./installation.
+  - name: Usage
+    link: ./usage.html
   {% if cookiecutter.create_author_file == 'y' -%}
   - name: Authors
     link: ./authors.html
   {% endif %}
   - name: History
     link: ./history.html
+  - name: Contributing
+    link: ./contributing.html
