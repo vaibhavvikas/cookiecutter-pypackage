@@ -1,0 +1,21 @@
+remote_theme: vaibhavvikas/jekyll-theme-minimalistic
+color-scheme: auto
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+navigation:
+  - name: {{ cookiecutter.project_name }}
+    link: ./
+  - name: Installation
+    link: ./installation.html
+  - name: Installation
+    link: ./installation.
+  {% if cookiecutter.create_author_file == 'y' -%}
+  - name: Authors
+    link: ./authors.html
+  {% endif %}
+  - name: History
+    link: ./history.html
