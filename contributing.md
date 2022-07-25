@@ -1,3 +1,8 @@
+---
+layout: default
+---
+
+
 **[Home](https://vaibhavvikas.github.io/) >> [Projects](https://vaibhavvikas.github.io/projects.html) >> [Cookicutter Pypackage](./) >> Contributing**
 
 ## Contributing
