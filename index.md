@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+**[Home](https://vaibhavvikas.github.io/) >> [Projects](https://vaibhavvikas.github.io/projects.html) >> Cookicutter Pypackage**
 
-You can use the [editor on GitHub](https://github.com/vaibhavvikas/cookiecutter-pypackage/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Cookiecutter PyPackage
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Cookiecutter template for a Python package.
 
-### Markdown
+* GitHub repo: https://github.com/vaibhavvikas/cookiecutter-pypackage/
+* Free software: BSD license
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Features
 
-```markdown
-Syntax highlighted code block
+* Testing setup with ``unittest`` and ``python setup.py test`` or ``pytest``
+* Tox_ testing: Setup to easily test for Python 3.6, 3.7, 3.8
+* Docs using github pages and Minimalistic theme
+* bump2version_: Pre-configured version bumping with a single command
+* Auto-release to PyPI_ when you push a new tag to master (optional)
+* Command line interface using Click (optional)
 
-# Header 1
-## Header 2
-### Header 3
+**Cookiecutter: https://github.com/cookiecutter/cookiecutter**
 
-- Bulleted
-- List
+## Quickstart
 
-1. Numbered
-2. List
+Install the latest Cookiecutter if you haven't installed it yet (this requires
+Cookiecutter 1.4.0 or higher):
 
-**Bold** and _Italic_ and `Code` text
+    pip install -U cookiecutter
 
-[Link](url) and ![Image](src)
-```
+Generate a Python package project:
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+    cookiecutter https://github.com/vaibhavvikas/cookiecutter-pypackage.git
 
-### Jekyll Themes
+Then:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vaibhavvikas/cookiecutter-pypackage/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+* Create a repo and put it there.
+* Install the requirements into a virtualenv. (``pip install -r requirements.txt``)
+* Register your project with PyPI.
+* Go to your project settings and activate GitHub pages and specifiy the docs folder for the documentations to be published at your github pages website.
+* Release your package by pushing a new tag to main.
+* In the ``requirements.txt`` file that specifies the packages you will need for
+  your project and their versions. For more info see the `pip docs for requirements files`.
 
-### Support or Contact
+pip docs for requirements files: https://pip.pypa.io/en/stable/user_guide/#requirements-files
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Register: https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives
+
+
+## Setting up Github pages:
+
+* Go to repository settings and navigate to github pages from the sidebar.
+* In the source dropdown, select your default branch where you have the docs folder.
+* In the folder dropdown selct `\docs`.
+* Click on `save`. The github action for github pages deployment will start after that you can check the github pages when its complete.
+
+## Known Issues:
+
+Github Pages don't support the files or links of files outside the github pages folder i.e. you can't access files in the parent directory. As a result you'll need to copy the contents of the corresponding files from your main repo to the files inside docs folder. I know its kind of redundant. I will update if I find any solution. Suggestions are welcome (:
